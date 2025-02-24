@@ -1,0 +1,21 @@
+{
+  "name": "poc-api-versioning",
+  "version": "1.0.0",
+  "description": "Proof of concept - how api versioning works",
+  "main": "userapi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./userapi.js",
+    "doc": "node swagger.js"
+  },
+  "author": "Maël KEHL",
+  "license": "ISC",
+  "dependencies": {
+    "and": "^0.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

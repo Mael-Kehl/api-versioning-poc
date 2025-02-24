@@ -1,0 +1,28 @@
+networks: 
+  network:
+
+services:
+
+  backend-poc-api:
+    image: back
+    build: 
+      context: api
+      dockerfile: Dockerfile
+    container_name: back-poc-api
+    environment:
+      SERVER_IP: 0.0.0.0
+    ports: 
+      - 3000:3000
+    networks: 
+      - network
+  
+  frontend-poc-api:
+    image: front
+    build: 
+      context: client
+      dockerfile: Dockerfile
+    container_name: front-poc-api
+    environment:
+      BACKEND_URL: http://127.0.0.1:3000
+    ports: 
+      - 80:80

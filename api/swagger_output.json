@@ -1,0 +1,333 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "User API",
+    "description": "API (PoC) de gestion des utilisateurs avec différentes versions.",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/user/v1.0.0": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/v1.1.0": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/v1.1.0.breaking": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/v1.2.0": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/v2.0.0": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/v2.0.0.breaking": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/v2.1.0": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/v3.0.0": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "UserV100": {
+      "type": "object",
+      "properties": {
+        "fullname": {
+          "type": "string",
+          "example": "Archibald Haddock"
+        },
+        "birthdate": {
+          "type": "string",
+          "example": "18/10/1941"
+        },
+        "job": {
+          "type": "string",
+          "example": "capitaine"
+        }
+      }
+    },
+    "UserV110": {
+      "type": "object",
+      "properties": {
+        "fullname": {
+          "type": "string",
+          "example": "Archibald Haddock"
+        },
+        "firstname": {
+          "type": "string",
+          "example": "Archibald"
+        },
+        "lastname": {
+          "type": "string",
+          "example": "Haddock"
+        },
+        "birthdate": {
+          "type": "string",
+          "example": "18/10/1941"
+        },
+        "job": {
+          "type": "string",
+          "example": "capitaine"
+        }
+      }
+    },
+    "UserV110breaking": {
+      "type": "object",
+      "properties": {
+        "fullname": {
+          "type": "string",
+          "example": "Archibald Haddock"
+        },
+        "firstname": {
+          "type": "string",
+          "example": "Archibald"
+        },
+        "lastname": {
+          "type": "string",
+          "example": "Haddock"
+        },
+        "birthdate": {
+          "type": "string",
+          "example": "18 octobre 1941"
+        },
+        "job": {
+          "type": "string",
+          "example": "capitaine"
+        }
+      }
+    },
+    "UserV120": {
+      "type": "object",
+      "properties": {
+        "fullname": {
+          "type": "string",
+          "example": "Archibald Haddock"
+        },
+        "firstname": {
+          "type": "string",
+          "example": "Archibald"
+        },
+        "lastname": {
+          "type": "string",
+          "example": "Haddock"
+        },
+        "birthdate": {
+          "type": "string",
+          "example": "18/10/1941"
+        },
+        "birthdateday": {
+          "type": "string",
+          "example": "18"
+        },
+        "birthdatemonth": {
+          "type": "string",
+          "example": "10"
+        },
+        "birthdateyear": {
+          "type": "string",
+          "example": "1941"
+        },
+        "job": {
+          "type": "string",
+          "example": "capitaine"
+        }
+      }
+    },
+    "UserV200": {
+      "type": "object",
+      "properties": {
+        "firstname": {
+          "type": "string",
+          "example": "Archibald"
+        },
+        "lastname": {
+          "type": "string",
+          "example": "Haddock"
+        },
+        "birthdateday": {
+          "type": "string",
+          "example": "18"
+        },
+        "birthdatemonth": {
+          "type": "string",
+          "example": "10"
+        },
+        "birthdateyear": {
+          "type": "string",
+          "example": "1941"
+        },
+        "job": {
+          "type": "string",
+          "example": "capitaine"
+        }
+      }
+    },
+    "UserV200breaking": {
+      "type": "object",
+      "properties": {
+        "firstname": {
+          "type": "string",
+          "example": "Archibald"
+        },
+        "lastname": {
+          "type": "string",
+          "example": "Haddock"
+        },
+        "birthdateday": {
+          "type": "string",
+          "example": "18"
+        },
+        "birthdatemonth": {
+          "type": "string",
+          "example": "october"
+        },
+        "birthdateyear": {
+          "type": "string",
+          "example": "1941"
+        },
+        "job": {
+          "type": "string",
+          "example": "capitaine"
+        }
+      }
+    },
+    "UserV210": {
+      "type": "object",
+      "properties": {
+        "firstname": {
+          "type": "string",
+          "example": "Archibald"
+        },
+        "lastname": {
+          "type": "string",
+          "example": "Haddock"
+        },
+        "birthdateday": {
+          "type": "string",
+          "example": "18"
+        },
+        "birthdatemonth": {
+          "type": "string",
+          "example": "10"
+        },
+        "birthdateyear": {
+          "type": "string",
+          "example": "1941"
+        },
+        "job": {
+          "type": "string",
+          "example": "capitaine"
+        },
+        "jobs": {
+          "type": "array",
+          "example": [
+            "capitaine",
+            "distilleur"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "UserV300": {
+      "type": "object",
+      "properties": {
+        "firstname": {
+          "type": "string",
+          "example": "Archibald"
+        },
+        "lastname": {
+          "type": "string",
+          "example": "Haddock"
+        },
+        "birthdateday": {
+          "type": "string",
+          "example": "18"
+        },
+        "birthdatemonth": {
+          "type": "string",
+          "example": "10"
+        },
+        "birthdateyear": {
+          "type": "string",
+          "example": "1941"
+        },
+        "jobs": {
+          "type": "array",
+          "example": [
+            "capitaine",
+            "distilleur"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
