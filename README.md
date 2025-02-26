@@ -16,6 +16,7 @@ The normal versioned rutes means the data structure has changed.
 # Run project
 
 ```sh
+docker-compose build
 docker-compose up -d 
 ```
 

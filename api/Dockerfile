@@ -9,11 +9,9 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install 
 
-#Copy the rest of the project
+#Copy the rest of the project (including entrypoint)
 COPY . .
 
-COPY entrypoint.sh ./entrypoint.sh
+RUN chmod +x entrypoint.sh
 
-RUN chmod +x ./entrypoint.sh
-
-CMD ["./entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
