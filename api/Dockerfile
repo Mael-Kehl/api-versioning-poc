@@ -12,6 +12,7 @@ RUN npm install
 #Copy the rest of the project (including entrypoint)
 COPY . .
 
-RUN chmod +x entrypoint.sh
+COPY ./entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
