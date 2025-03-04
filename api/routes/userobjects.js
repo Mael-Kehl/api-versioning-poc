@@ -83,6 +83,18 @@ const userv300 = {
     "jobs" : ["capitaine", "distilleur"]
 }
 
+const userv300lazy = {
+    "fullname": "Archibald Haddock",
+    "firstname": "Archibald",
+    "lastname": "Haddock",
+    "birthdate": "18/10/1941", 
+    "birthdateday": "18", 
+    "birthdatemonth": "10",
+    "birthdateyear": "1941", 
+    "job": "capitaine",
+    "jobs" : ["capitaine", "distilleur"]
+}
+
 module.exports = {
     userv100,
     userv110,
@@ -91,5 +103,6 @@ module.exports = {
     userv200,
     userv200breaking,
     userv210, 
-    userv300
+    userv300,
+    userv300lazy
 }

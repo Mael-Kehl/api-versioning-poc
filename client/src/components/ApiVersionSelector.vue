@@ -26,6 +26,7 @@ const apiVersions = [
   "v2.0.0.breaking",
   "v2.1.0",
   "v3.0.0",
+  "v3.0.0.lazy"
 ]
 
 function handleVersionSelected(event) {

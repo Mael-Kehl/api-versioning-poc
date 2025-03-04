@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-const {userv100, userv110, userv110breaking, userv120, userv200, userv200breaking, userv210, userv300} = require('./userobjects.js');
+const {userv100, userv110, userv110breaking, userv120, userv200, userv200breaking, userv210, userv300, userv300lazy} = require('./userobjects.js');
 
 const setHeaders = (headerName, message) => (req, res, next) => {
     if (headerName) res.set(headerName, String(message));
@@ -151,6 +151,24 @@ router.get('/v2.1.0', setHeaders("Information", "Version 3.0.0 beta available.")
 router.get('/v3.0.0', (req, res) => {
     console.info("API call to v3.0.0");
     res.json(userv300);
+});
+
+/**
+ * @swagger
+ * /user/v3.0.0.lazy:
+ *   get:
+ *     summary: Gets user, version 3.0.0.lazy
+ *     responses:
+ *       200:
+ *         description: user object v3.0.0.lazy
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/definitions/UserV300lazy'
+ */
+router.get('/v3.0.0.lazy', (req, res) => {
+    console.info("API call to v3.0.0.lazy");
+    res.json(userv300lazy);
 });
 
 module.exports = router;
